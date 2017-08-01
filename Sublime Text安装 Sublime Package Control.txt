@@ -1,0 +1,44 @@
+Sublime Text 2 安装 Sublime Package Control
+Sublime Text 2 安装 Sublime Package Control，通过 Sublime Package Control，安装、升级和卸载 Package。
+
+安装 Package Control 的方法：
+
+1、打开 Sublime Text 2，按下 Control + ` 调出 Console，通常这个快捷键会与PC上的其它软件起冲突，需要修改其它软件的这个快捷键。
+
+2、将以下代码粘贴进命令行中并回车：
+
+import urllib2,os;pf='Package Control.sublime-package';ipp=sublime.installed_packages_path();os.makedirs(ipp) if not os.path.exists(ipp) else None;open(os.path.join(ipp,pf),'wb').write(urllib2.urlopen('http://sublime.wbond.net/'+pf.replace(' ','%20')).read())
+3、重启 Sublime Text 2，如果在 Preferences -> Package Settings中见到Package Control这一项，就说明安装成功了。
+
+Sublime Text 3 请使用以下代码：
+1、打开 Sublime Text 3，按下 Control + ` 调出 Console
+2、将以下代码粘贴进命令行中并回车：
+import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())
+
+快捷调用Package Control：
+ctrl+shift+p
+
+输入install，调用出安装窗口；
+在窗口输入需安装的插件，回车即可；
+常用的有：
+1.Emmet
+2.HTML-CSS-JS Prettify 
+在插件安装输入框，输入：HTML-CSS-JS Prettify  并安装该插件
+三，如果没有装nodejs， 下载nodejs进行安装。
+3.Bootstrap 3 Snippets
+4.Better Completion
+
+http://nodejs.org/download/
+
+四，设置nodejs路径。
+在HTML-CSS-JS Prettify菜单下，选择set'node'path，输入
+{
+  // Simply using `node` without specifying a path sometimes doesn't work :(
+  // https://github.com/victorporof/Sublime-HTMLPrettify#oh-noez-command-not-found
+  // http://nodejs.org/#download
+  "node_path": "D:/Program Files (x86)/nodejs/node.exe"
+}
+3.goto_css_declaration
+windows键+alt+,
+windows键+alt+.
+把html文件和它调用的css文件都要打开，就能从html文件定位到css文件的classname部分。

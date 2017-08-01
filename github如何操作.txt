@@ -1,0 +1,37 @@
+github
+shellcj66@163.com / Hua
+
+初始化
+git init
+git add .（这是把当前目录下所有文件纳入管理）
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+git clone https://github.com/shellcj66/csc-demo
+
+git如何上传文件：
+1.git status（查看状态）
+2.git add .（添加所有修改文件）
+3.git commit -m "写提交注释"
+4.git push -u origin master
+
+git如何下载文件
+1.git pull
+
+git如何回退版本
+	
+#回退所有内容到上一个版本 
+git reset HEAD^ 
+#回退a.py这个文件的版本到上一个版本 
+git reset HEAD^ a.py 
+#向前回退到第3个版本 
+git reset –soft HEAD~3 
+#将本地的状态回退到和远程的一样 
+git reset –hard origin/master 
+#回退到某个版本 
+git reset 057d 
+#回退到上一次提交的状态，按照某一次的commit完全反向的进行一次commit 
+git revert HEAD  
+
+===========================
+http-server -p 8090（启动服务器）
+

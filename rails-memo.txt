@@ -1,0 +1,61 @@
+mac下ruby on rails安装步骤：
+ruby -v 查看是否安装了ruby，如有，出现ruby的版本
+rails -v 查看是否安装了rails，如有，出现rails的版本，如没有，进行如下步骤安装
+gem sources -l 查看rails的资源，例如出现http://rubygems.org/
+gem sources -a https://ruby.taobao.org/ 新增资源
+gem sources -r https://rubygems.org/ 删除资源
+gem install rails 安装rails
+
+===================================
+
+rails new demo03
+
+subl demo03
+
+cd demo03
+
+rails g scaffold model title body
+
+rake db: migrate
+
+rails s
+
+=============================
+
+gemfile文件 加
+gem 'twitter-bootstrap-rails'
+gem 'high_voltage'
+gem 'jquery_mobile_rails'
+
+application.js 加 //= require jquery.mobile
+
+application.css 加  *= require jquery.mobile
+
+application.js 删除 //= require turbolinks
+
+=================================
+
+cd Documents
+
+mkdir test1
+rmdir test1
+
+rails new demo01 -B
+cd demo01
+subl ./
+
+rails g bootstrap:install static
+rails g bootstrap:layout
+rails g bootstrap:themed Books
+rails s
+
+===================================
+
+rake db:rollback
+rails d scaffold ticket
+
+rails g migration add_price_to_tickets price:string
+rake db:migrate
+books_controller.rb文件加permit(:title, :body, :price)
+
+book.rb文件写校验validates :title, presence: true
