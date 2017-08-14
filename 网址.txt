@@ -31,6 +31,7 @@ svn://192.168.1.51/winclouds-doc/wincloud/CNware/demo
 https://192.168.213.111/uap/
 admin/1234567890
 
+…Ó€⁄“∆∂Ø
 https://192.168.214.157/uap/login
 admin/admin@123
 
